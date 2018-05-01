@@ -32,20 +32,6 @@ RUN sudo update-alternatives --install /usr/bin/javac javac /opt/java-jdk/jdk-10
 RUN java --version
 RUN javac --version
 
-# install java default jre/jdk
-# RUN apt-get -y install default-jre \
-#   && default-jdk
-
-# install Oracle JDK 8
-# RUN sudo apt-get -y install oracle-java8-installer
-
-# install Oracle JDK 9
-# RUN sudo apt-get -y install oracle-java9-installer
-
-# Managing Java
-# RUN sudo update-alternatives --config java
-
-# Setting the JAVA_HOME Environment Variable
-
-ENTRYPOINT ["top", "-b"]
+# ENTRYPOINT ["top", "-b"]
 # CMD ["-c"]
+# ENTRYPOINT ["/bin/bash"]
