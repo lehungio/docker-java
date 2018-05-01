@@ -1,0 +1,25 @@
+version: '3.3'
+
+services:
+  # java:
+  #   image: lehungio/docker-java:latest
+  #   volumes:
+  #       - ./:/code
+
+  java_test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /code
+    volumes:
+      - ".:/code"
+
+  # web:
+  #   image: nginx:latest
+  #   ports:
+  #     - "80:80"
+  #   volumes:
+  #     - ./:/code
+  #     - ./site.conf:/etc/nginx/conf.d/site.conf
+  #   depends_on:
+  #     - java_test
